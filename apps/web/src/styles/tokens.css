@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Design tokens — the single source of truth for colour, spacing, radii and
+   elevation. Components never hard-code a raw colour value.
+
+   Default theme is dark; adding `data-theme="light"` to <html> flips the
+   palette. See src/theme/useTheme.ts for the persistence layer.
+   ========================================================================== */
+
+:root {
+  /* Typography ---------------------------------------------------------- */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* Spacing scale (4px base) -------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Radii --------------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Motion -------------------------------------------------------------- */
+  --transition-fast: 120ms ease;
+  --transition: 180ms ease;
+
+  /* Layout -------------------------------------------------------------- */
+  --layout-max: 1400px;
+  --board-max: 640px;
+
+  /* --- Dark palette (product default) ---------------------------------- */
+  color-scheme: dark;
+
+  --shadow-sm: 0 1px 2px rgba(6, 10, 20, 0.3);
+  --shadow-md: 0 10px 24px rgba(6, 10, 20, 0.34);
+  --shadow-lg: 0 24px 60px rgba(2, 6, 16, 0.5);
+  --shadow-board: 0 24px 48px -14px rgba(2, 6, 16, 0.75);
+
+  --bg: #0e1218;
+  --bg-glow: radial-gradient(1100px 520px at 50% -12%, rgba(106, 155, 255, 0.14), transparent 68%);
+  --surface: #161c25;
+  --surface-2: #1d2531;
+  --surface-hover: #253040;
+  --border: #2a3442;
+  --border-strong: #3b4759;
+
+  --text: #e8eefb;
+  --text-muted: #9fadc4;
+  --text-faint: #77849a;
+
+  --accent: #6a9bff;
+  --accent-hover: #8cb2ff;
+  --accent-soft: rgba(106, 155, 255, 0.16);
+  --accent-contrast: #08111f;
+
+  --danger: #ff6b6b;
+  --danger-soft: rgba(255, 107, 107, 0.16);
+
+  --board-light: #d9dee8;
+  --board-dark: #66748c;
+  --board-border: rgba(255, 255, 255, 0.09);
+
+  --sq-last: rgba(255, 214, 64, 0.4);
+  --sq-selected: rgba(106, 155, 255, 0.55);
+  --sq-hover: rgba(255, 255, 255, 0.1);
+  --sq-legal: rgba(61, 220, 151, 0.9);
+  --sq-capture: rgba(255, 107, 107, 0.85);
+
+  --piece-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);
+  --scrim: rgba(4, 8, 16, 0.68);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --shadow-sm: 0 1px 2px rgba(23, 38, 66, 0.08);
+  --shadow-md: 0 10px 24px rgba(23, 38, 66, 0.12);
+  --shadow-lg: 0 24px 60px rgba(23, 38, 66, 0.2);
+  --shadow-board: 0 20px 40px -16px rgba(23, 38, 66, 0.4);
+
+  --bg: #f3f5fa;
+  --bg-glow: radial-gradient(1100px 520px at 50% -12%, rgba(47, 107, 255, 0.1), transparent 68%);
+  --surface: #ffffff;
+  --surface-2: #f0f3f9;
+  --surface-hover: #e4e9f3;
+  --border: #dde3ee;
+  --border-strong: #c2cbdc;
+
+  --text: #141d2b;
+  --text-muted: #56637a;
+  --text-faint: #8391a8;
+
+  --accent: #2f6bff;
+  --accent-hover: #1f57e6;
+  --accent-soft: rgba(47, 107, 255, 0.12);
+  --accent-contrast: #ffffff;
+
+  --danger: #d92d20;
+  --danger-soft: rgba(217, 45, 32, 0.1);
+
+  --board-light: #eef1f7;
+  --board-dark: #a9b7cc;
+  --board-border: rgba(15, 23, 42, 0.08);
+
+  --sq-last: rgba(255, 190, 0, 0.45);
+  --sq-selected: rgba(47, 107, 255, 0.5);
+  --sq-hover: rgba(15, 23, 42, 0.07);
+  --sq-legal: rgba(15, 157, 99, 0.85);
+  --sq-capture: rgba(217, 45, 32, 0.7);
+
+  --piece-shadow: 0 2px 3px rgba(23, 38, 66, 0.25);
+  --scrim: rgba(15, 23, 42, 0.45);
+}
